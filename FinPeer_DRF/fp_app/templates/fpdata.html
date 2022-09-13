@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+<style>
+	.container{
+        width: 200%;
+        margin: 100;
+        color: green;
+        display: inline-block;
+    }
+</style>
+<body>
+	{% block content %}
+		<form method="get" action="logout">
+    		<button type="submit" style="float: right;width: 10%; height: 30px;font-size : 15px">Logout</button>
+		</form>
+		<table>
+			<tr>
+				<td><h2>FinancePeer User Data!! </h2></td>
+			</tr>
+		</table>
+		<table class="table_info">
+		<tr>
+			{% for nom in nom_columnes %}
+			<th><h3>{{nom}}</h3></th>
+			{% endfor %}
+		</tr>
+		{% for i in table_data %}
+		<tr>
+			{% for value in i %}
+				<td><h4>{{value}}</h4></td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+		</table>
+		<hr>
+		<img src="{% static 'Financepeer_new_logo.png' %}" width="600" height="350" style="text-align:center;">
+		<div class="container">
+			<p></p>
+			<form method="get" action="fpdata">
+		    		<button type="submit">View all products</button>
+			</form>
+    	</div>
+	{% endblock %}
+</body>

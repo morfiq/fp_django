@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+<style>
+	.container{
+        width: 200%;
+        margin: 100;
+        color: green;
+        display: inline-block;
+    }
+</style>
+<body>
+	{% block content %}
+		<form method="get" action="logout">
+    		<button type="submit" style="float: right;width: 10%; height: 30px;font-size : 15px">Logout</button>
+		</form>
+		<table>
+			<tr>
+<!--				<td><img src="{{ image }}" width="60" height="60" align="right"> <br></td>-->
+				<td><h2>Welcome {{ username }}!! </h2></td>
+			</tr>
+		</table>
+		<hr>
+		<img src="{% static 'Financepeer_new_logo.png' %}" width="600" height="350" style="text-align:center;">
+		<div class="container">
+			<p></p>
+			<form method="get" action="fpdata">
+		    		<button type="submit">View all products</button>
+			</form>
+    	</div>
+	{% endblock %}
+</body>
