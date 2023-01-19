@@ -1,4 +1,4 @@
-Project: Django website to upload json file and display in a table
+Project: Django website to upload json file and then display in a table
 About:
 Django project to upload json file from a web page and store data in PostgreSQL database, display the same data in tabular
 format for logged in user. User registration and authentication also supported.
